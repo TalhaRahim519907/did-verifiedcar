@@ -81,8 +81,9 @@ function buildDIDDocument(did) {
 }
 
 // ─── ROUTES ────────────────────────────────────────────────────────
+
 app.get('/', (req, res) => {
-  res.send('did:verifiedcar Resolver is running');
+  res.sendFile(__dirname + '/public/spec/index.html');
 });
 // Resolve a DID
 app.get('/resolve/:did', (req, res) => {
